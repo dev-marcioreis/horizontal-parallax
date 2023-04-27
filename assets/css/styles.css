@@ -1,0 +1,52 @@
+/*==========Google Fonts==========*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*==========Reset==========*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*==========Root==========*/
+:root {
+	--bg-color: hsl(0, 0%, 0%); 
+	--shadow: inset 0 0 250px hsla(0, 0%, 0%, 0.3);
+}
+
+/*==========Base==========*/
+html, body {
+	height: 100%;
+	background-color: var(--bg-color);
+}
+
+/*==========Slider==========*/
+.slider {
+	height: 100%;
+}
+.slider__layer {
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center;
+	will-change: transform;
+}
+.slider__layer::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	box-shadow: var(--shadow);
+}
+.slider__item {
+	overflow: hidden;
+}
+.slider__wrapper {
+	will-change: transform;
+	transform-style: preserve-3d;
+}
